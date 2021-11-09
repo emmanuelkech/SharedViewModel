@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".StartFragment">
 
+    <data>
+        <variable
+            name="start"
+            type="com.example.sharedviewmodel.StartFragment" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_between_elements"
+                android:onClick="@{() -> start.orderCupcake(1)}"
                 android:minWidth="@dimen/order_cupcake_button_width"
                 android:text="@string/one_cupcake" />
 
@@ -46,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:onClick="@{() -> start.orderCupcake(6)}"
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:minWidth="@dimen/order_cupcake_button_width"
                 android:text="@string/six_cupcakes" />
@@ -56,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_between_elements"
+                android:onClick="@{() -> start.orderCupcake(12)}"
                 android:minWidth="@dimen/order_cupcake_button_width"
                 android:text="@string/twelve_cupcakes" />
         </LinearLayout>

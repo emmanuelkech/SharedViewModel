@@ -1,11 +1,10 @@
 package com.example.sharedviewmodel
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.sharedviewmodel.databinding.FragmentStartBinding
@@ -27,13 +26,13 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding?.apply {
-            // Set up the button click listeners
-            orderOneCupcake.setOnClickListener { orderCupcake(1) }
-            orderSixCupcakes.setOnClickListener { orderCupcake(6) }
-            orderTwelveCupcakes.setOnClickListener { orderCupcake(12) }
-        }
+        binding?.start = this
+//        binding?.apply {
+//            // Set up the button click listeners
+//            orderOneCupcake.setOnClickListener { orderCupcake(1) }
+//            orderSixCupcakes.setOnClickListener { orderCupcake(6) }
+//            orderTwelveCupcakes.setOnClickListener { orderCupcake(12) }
+//        }
     }
 
 
@@ -50,4 +49,5 @@ class StartFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
+
 }

@@ -7,7 +7,9 @@
         <variable
             name="viewModel"
             type="com.example.sharedviewmodel.model.OrderViewModel" />
-
+        <variable
+            name="summary"
+            type="com.example.sharedviewmodel.SummaryFragment" />
     </data>
 
     <ScrollView
@@ -108,8 +110,18 @@
                 android:id="@+id/send_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> summary.sendOrder()}"
                 android:layout_marginTop="@dimen/side_margin"
                 android:text="@string/send" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> summary.cancelOrder()}"
+                android:layout_marginTop="@dimen/side_margin"
+                android:text="@string/cancel" />
 
         </LinearLayout>
     </ScrollView>
